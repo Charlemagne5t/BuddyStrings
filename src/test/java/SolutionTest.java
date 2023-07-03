@@ -28,4 +28,30 @@ public class SolutionTest {
 
         Assertions.assertTrue(actual);
     }
+    @Test
+    public void buddyStringsTest4(){
+        String s = "abac";
+        String goal = "abad";
+        boolean actual = new Solution().buddyStrings(s, goal);
+
+        Assertions.assertFalse(actual);
+    }
+
+    @Test
+    public void buddyStringsTest5(){
+        String s = "abcd";
+        String goal = "badc";
+        boolean actual = new Solution().buddyStrings(s, goal);
+
+        Assertions.assertFalse(actual);
+    }
+
+    @Test
+    public void buddyStringsTest6(){
+        String s = "abca";
+        String goal = "abda";
+        boolean actual = new Solution().buddyStrings(s, goal);
+
+        Assertions.assertFalse(actual);
+    }
 }
